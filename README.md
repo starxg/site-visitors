@@ -10,19 +10,20 @@
 ```
 
 ### Usage
+[/badge](https://visitors.starxg.com/badge?page_id=https://github.com/starxg/site-visitors)
 
 ![visitor badge](https://visitors.starxg.com/badge?page_id=https://github.com/starxg/site-visitors) (default style)
 
 ![hello badge](https://visitors.starxg.com/badge?page_id=https://github.com/starxg/site-visitors&left_color=rgb(200,0,0)&right_color=rgb(0,100,0)&left_text=hello) (left_text=hello, left_color=rgb(200,0,0), right_color=rgb(0,100,0))
 
-[/json?page_id=page_id](https://visitors.starxg.com/json?page_id=https://github.com/starxg/site-visitors) (json)
+[/json](https://visitors.starxg.com/json?page_id=https://github.com/starxg/site-visitors) (json)
 ```json
 {
     "count": 5
 }
 ```
 
-[/text?page_id=page_id](https://visitors.starxg.com/text?page_id=https://github.com/starxg/site-visitors) (text)
+[/text](https://visitors.starxg.com/text?page_id=https://github.com/starxg/site-visitors) (text)
 ```text
 123
 ```
