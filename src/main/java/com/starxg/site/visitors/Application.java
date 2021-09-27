@@ -33,7 +33,6 @@ public class Application {
         OPTIONS.addOption(Option.builder("b").hasArg().type(String.class).desc("Save binlog to a <file>").build());
     }
 
-    @SuppressWarnings("AlibabaAvoidManuallyCreateThread")
     public static void main(String[] args) throws Exception {
         CommandLine commandLine;
 
@@ -58,6 +57,7 @@ public class Application {
             counter = new MemoryWithSyncerCounter(new File(commandLine.getOptionValue("b")));
         } else {
             counter = new MemoryCounter();
+            System.out.println("Data will be lost at the end of the program.");
         }
 
         HttpServer server = HttpServer.create(new InetSocketAddress(host, port), 0);
@@ -65,6 +65,7 @@ public class Application {
         server.createContext("/json", new JsonHandler(counter));
         server.createContext("/text", new TextHandler(counter));
         server.createContext("/badge", new BadgeHandler(counter));
+
         server.start();
     }
 
